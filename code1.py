@@ -26,8 +26,8 @@ if gpus:
 IMAGE_SIZE = [224, 224]
 
 # Paths to datasets
-train_path = r"E:\sem 5\project 2\project_dataset\chest_xray\train"
-valid_path = r"E:\sem 5\project 2\project_dataset\chest_xray\test"
+train_path = r"#training path"
+valid_path = r"#test path"
 
 # Load the VGG16 model
 vgg = VGG16(input_shape=IMAGE_SIZE + [3], weights='imagenet', include_top=False)
@@ -96,7 +96,7 @@ import numpy as np
 model = load_model('my_model.keras')
 
 # Load and preprocess a test image
-img = image.load_img(r"E:\sem 5\project 2\project_dataset\chest_xray\test\NORMAL\IM-0087-0001.jpeg", target_size=(224, 224))
+img = image.load_img(r"#path of image in .jpeg format to get prediction", target_size=(224, 224))
 x = image.img_to_array(img)
 x = np.expand_dims(x, axis=0)
 img_data = preprocess_input(x)
