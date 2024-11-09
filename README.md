@@ -1,29 +1,51 @@
 # Pneumonia-Detection-using-Chest-X-ray
-In this we are going to talk about project based on Machine Learning which include Cnn and deeplearning.
-So, lets get started. 
-Follow steps given below to create this project:
+This repository contains a deep learning model trained to detect pneumonia from chest X-ray images. The project leverages convolutional neural networks (CNNs) to classify X-ray images as either normal or indicative of pneumonia. This model was trained using a labeled dataset of chest X-ray images and provides a PyQt5-based frontend for easy image uploading and prediction.
 
-I recommend you to download chest x-ray dataset using link provide below.
-Dataset Download Link:
+Features:
+        1. Deep learning model for binary classification (Normal/Pneumonia).
+        2. Frontend GUI built with PyQt5 for image upload and prediction display.
+        3. Model trained on chest X-ray images with high accuracy.
 
-step-1: I recomend to code this project on jupyter. so, first we have to configure jupyter notebook.
-        follow the provided link to get idea how we are going to use jupyter notebook.
-        Link:
+Install Required Dependencies
+        Python 3.9 (recommended for PyQt5 compatibility)
+        Install other packages with:
+        # run this code in cmd. pip install -r requirements.txt
+        Ensure packages include:
+                1. TensorFlow/Keras
+                2. PyQt5
+                3. OpenCV
+                4. Numpy, Matplotlib, etc.
+Dataset:
+        We used a publicly available dataset, Chest X-Ray Images (Pneumonia) from Kaggle. Download the dataset and place it in the data directory within the project          folder.
+        Link to download Dataset:https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 
-step-2: now to create this project without any error i recommend you to check that you successfully provide
-        path of jupyter notebook to your system.
+Model Training:
+        Data Preprocessing: Images were resized and normalized for better model performance.
+        Model Architecture: A convolutional neural network (CNN) was used to achieve high accuracy in classifying pneumonia.
+        Training: The model was trained using a batch size of 10 and saved as my_model.keras.
+        Run Training Script in cmd: python train_model.py
+        This script will save the trained model to the project directory.
 
-step-3: now use provided code to create this project. 
-        use code provided in code-1 folder of this repository
+Frontend Interface:
+        This project includes a PyQt5-based graphical interface where users can:
+        Upload chest X-ray images.
+        View predictions (normal or pneumonia) with visual feedback.
+        To start the GUI, run given code in cmd :
+        python gui.py
 
- step-4: now i recommend you to make three cell to seprate your code in three sections.
+Usage:
+        Launch the GUI
+        run in cmd:python gui.py
 
- step-5: I hope you have been successfully get your project executed. now follow sixth step to create frontend
-         or interface to uplaod chest x-ray and get prediction.
+Upload Image:
+        Use the upload button to select an X-ray image from your files.
 
-step-6: Now, this frontend responsive page is made on Sublime Text.
+Predict:
+        Click "Predict" to classify the image and view the result.
 
-step-7: use code provided in code-2 folder and gif is also been provided. To resolve any error produce during this
-        project i recommend you to strictly mind path of your dataset you are providing to your project.
+Contributing:
+        Contributions, bug reports, and feature requests are welcome! Please open an issue or submit a pull request.
 
+
+        THANK YOU......
         
