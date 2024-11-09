@@ -1,3 +1,4 @@
+# In[1]:
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -48,6 +49,8 @@ prediction = Dense(1, activation='sigmoid')(x)
 model = Model(inputs=vgg.input, outputs=prediction)
 model.summary()
 
+# In[2]:
+
 # Compile the model for binary classification
 model.compile(
   loss='binary_crossentropy',  # Change to binary_crossentropy for binary classification
@@ -67,7 +70,7 @@ test_set = test_datagen.flow_from_directory(valid_path, target_size=(224, 224), 
 early_stopping = keras.callbacks.EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
 reduce_lr = keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=2)
 
-
+# In[3]:
 
 # Train the model
 r = model.fit(
